@@ -1,0 +1,8 @@
+SetVirtualResolution (1552,792)
+SetWindowSize (1552,792,0)
+
+LoadImage (2, "pista4.png")
+CreateSprite(2,2)
+
+LoadImage (1, "carro1.png")
+createsprite(1,1)

@@ -1,0 +1,7 @@
+matcharrows:
+
+if GetRawKeyPressed (37) and setadireitaY > 420
+	score=score+100
+endif
+
+return

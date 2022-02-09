@@ -1,0 +1,34 @@
+move:
+
+// Primeiras setas
+
+SetSpriteSize (3, -1, 65)
+SetSpritePosition (3, 385, 200)
+
+SetSpriteSize (4, -1, 65)
+SetSpritePosition (4, 485, 200)
+
+SetSpriteSize (6, -1, 65)
+SetSpritePosition (6, 585, 200)
+
+SetSpriteSize (5, -1, 65)
+SetSpritePosition (5, 685, 200)
+
+// Segundas setas
+
+SetSpriteSize (7, -1, 65)
+SetSpritePosition (7, 810, 200)
+
+SetSpriteSize (8, -1, 65)
+SetSpritePosition (8, 910, 200)
+
+SetSpriteSize (9, -1, 65)
+SetSpritePosition (9, 1110, 200)
+
+SetSpriteSize (10, -1, 65)
+SetSpritePosition (10, 1010, 200)
+
+SetSpriteSize (1, -1, 42)
+SetSpritePosition (1, 780, 111)			
+
+return

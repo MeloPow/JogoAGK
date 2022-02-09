@@ -1,0 +1,42 @@
+movesetas:
+
+
+SetSpriteSize (3, -1, 65) //seta direita
+SetSpritePosition (3, 385, setadireitaY)
+
+setadireitay = getspriteY(3)+ 5
+
+
+if setadireitaY > 500
+	setadireitaY = 200
+endif
+
+SetSpriteSize (6, -1, 65) // seta de cima
+SetSpritePosition (6, 485, setacimaY)
+setacimay = getspriteY(6)+ 5
+
+
+if setacimaY > 500
+	setacimaY = 200
+	SetSpriteVisible(6,0)
+endif
+
+SetSpriteSize (4, -1, 65) // seta baixo
+SetSpritePosition (4, 585, setabaixoY)
+
+setabaixoY = getspriteY(4)+ 5
+
+if setabaixoY > 500
+	setabaixoY = 200
+endif
+
+SetSpriteSize (5, -1, 65) // seta esquerda
+SetSpritePosition (5, 685, setaesquerdaY)
+
+setaesquerdaY = getspriteY(5)+ 5
+
+if setaesquerdaY > 500
+	setaesquerdaY = 200
+endif
+
+return

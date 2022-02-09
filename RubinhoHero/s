@@ -1,0 +1,124 @@
+matcharrows:
+
+i = i + 1 // cima acerto
+a = a + 1 // cima erro
+l = l + 1 // esquerda acerto
+b = b + 1 // esquerda erro
+j = j + 1 // direita acerto
+c = c + 1 // direita erro
+n = n + 1 // baixo acerto
+d = d + 1 // baixo erro
+
+    setspritephysicson(6,10)
+    setspritephysicson(3,7)
+    setspritephysicson(4,8)
+    setspritephysicson(5,9)
+    
+if GetRawKeyPressed (37) /* and GetSpriteY(3) >= 370 and GetSpriteY (3) <=450 */  and GetSpriteCollision(3,7) = 1		//Condição de controle da seta esquerda
+	acertos=acertos+1
+	score=score-1
+	setspritecolor(7, 0, 255, 0, 200)
+	l = 0
+endif
+
+if l >= 20
+	loadsprite(3,"arrow1.png")
+    setspritecolor(7, 255, 0, 0, 255)
+endif
+// Quando o controle é apertado antes
+if GetRawKeyPressed (37) = 1 and GetSpriteY(3) >= -1000 and GetSpriteY (3) < 370 and GetSpriteCollision(3,7) = 0 
+		erros = erros + 1
+		setspritecolor(7, 0, 0, 255, 200)
+		b = 0
+endif
+
+if b >= 10 and l >= 20
+	    //loadsprite(3,"arrow1.png")
+        setspritecolor(7, 255, 255, 255, 255)
+        endif 
+
+if GetRawKeyPressed (40) /* and GetSpriteY(4) >= 350 and GetSpriteY (4) <=460*/ and GetSpriteCollision(4,8) = 1		//Condição de controle da seta pra baixo
+	acertos=acertos+1
+	score=score-1
+	setspritecolor(8, 0, 255, 0, 200)
+	n = 0
+endif
+
+if n >= 20
+setspritecolor(8, 255, 0, 0, 255)
+endif
+
+// Quando o controle é apertado antes
+if GetRawKeyPressed (40) and GetSpriteY(4) >= -1000 and GetSpriteY (4) < 370 and GetSpriteCollision(4,8) = 0 
+		erros = erros + 1
+		setspritecolor(8, 0, 0, 255, 200)
+		d = 0
+endif
+
+if n >= 20 and d >= 10
+	//loadsprite(4,"arrow2.png")
+setspritecolor(8, 255, 255, 255, 255)
+endif
+
+if GetRawKeyPressed (38) /*and GetSpriteY(5) >= 350 and GetSpriteY (5) <= 460*/ and GetSpriteCollision(5,9) = 1  	//Condição de controle da seta pra cima
+	acertos=acertos+1
+	score=score-1
+	setspritecolor(9, 0, 255, 0, 200)
+	i = 0
+endif
+
+if i >= 20
+setspritecolor(9, 255, 0, 0, 255)
+endif
+// Quando o controle é apertado antes
+if GetRawKeyPressed (38) and GetSpriteY(5) >= -1000 and GetSpriteY (5) < 370 and GetSpriteCollision(5,9) = 0 
+		erros = erros + 1
+		setspritecolor(9, 0, 0, 255, 200)
+		a = 0
+endif
+if i >= 20 and a >= 10
+	//loadsprite(5,"arrow3.png")
+    setspritecolor(9, 255, 255, 255, 255)
+endif
+
+
+if GetRawKeyPressed (39) /*and GetSpriteY(6) >= 370 and GetSpriteY (6) <=450*/ and GetSpriteCollision(6,10) = 1		//Condição de controle da seta direita
+	acertos=acertos+1
+	score=score-1
+	setspritecolor(10, 0, 255, 0, 200)
+	j = 0
+endif
+	
+if j >= 20
+setspritecolor(10, 255, 0, 0, 255)
+endif
+// Quando o controle é apertado antes
+if GetRawKeyPressed (39) and GetSpriteY(6) >= -1000 and GetSpriteY (6) < 370 and GetSpriteCollision(6,10) = 0 
+		erros = erros + 1
+		setspritecolor(10, 0, 0, 255, 200)
+		c = 0
+endif
+if j >= 20 and c >= 10
+	//loadsprite(6,"arrow4.png")
+    setspritecolor(10, 255, 255, 255, 255)
+endif
+
+ for ge = 0 to ge = acertos
+	if teste= 0
+		CreateText (1, ""+Str(ge))
+		SetTextPosition(1, 740,240)
+		settextsize (1, 40)
+		SetTextDepth(1,1)
+	endif
+next
+
+for gi = 0 to gi = score
+    if teste=0
+		CreateText (2, "Erros: " +Str(gi))
+		SetTextPosition(2, 740,300)
+		settextsize (2, 40)
+		SetTextDepth(2,1)
+	endif
+next
+
+return
